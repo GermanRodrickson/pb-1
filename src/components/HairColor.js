@@ -14,7 +14,6 @@ const HairColor = (props) => {
 
 const hairColor = props.hairColor;
 
-  
     return (
       <Hair style={{'backgroundColor' : hairColor}}></Hair>
     )

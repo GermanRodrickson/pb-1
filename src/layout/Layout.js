@@ -30,7 +30,7 @@ class App extends Component {
       items: [],
       isLoaded: false,
       filterText: '',
-      numberOfItems: 5,
+      numberOfItems: 25,
     };
   }
 
@@ -94,7 +94,7 @@ class App extends Component {
                   professions = {item.professions}
                   friends = {item.friends}
                   hairColor = {item.hair_color}
-                  genre = {item.name.length > 15 ? male : female}
+                  genre = {item.name.length > 18 ? male : female}
                   />
                 </WrapperItem>
               ))}

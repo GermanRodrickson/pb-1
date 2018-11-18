@@ -19,10 +19,6 @@ const Wrapper = styled.section`
   vertical-align: top;
   display: inline-block;
 
-  img {
-    
-  }
-
   &:hover {
     transform: translateY(-1px);
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
