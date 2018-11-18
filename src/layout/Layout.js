@@ -10,9 +10,7 @@ import NumberOfItems from '../components/NumberOfItems'
 import Loader from '../components/elements/Loader'
 
 //Images
-import transgender from '../img/transgender-solid.svg'
 import male from '../img/mars-solid.svg'
-import transgenderAlt from '../img/transgender-alt-solid.svg'
 import female from '../img/venus-solid.svg'
 
 const Wrapper = styled.section`
@@ -32,7 +30,7 @@ class App extends Component {
       items: [],
       isLoaded: false,
       filterText: '',
-      numberOfItems: 25,
+      numberOfItems: 5,
     };
   }
 
@@ -63,7 +61,6 @@ class App extends Component {
   render() {
 
     const { isLoaded, items, filterText, numberOfItems } = this.state;
-    const numberOfGenre = [male, female, transgenderAlt, transgender];
     const data = items.Brastlewark
     
     if (!isLoaded) {
@@ -97,7 +94,7 @@ class App extends Component {
                   professions = {item.professions}
                   friends = {item.friends}
                   hairColor = {item.hair_color}
-                  genre = {numberOfGenre[Math.floor(Math.random() * numberOfGenre.length)]}
+                  genre = {item.name.length > 15 ? male : female}
                   />
                 </WrapperItem>
               ))}
